@@ -75,7 +75,7 @@
     <main>
 
         <!-- Section: Home -->
-        <section id="home" class="content-section min-h-screen flex flex-col justify-center items-center text-center p-4 pt-16">
+        <section id="home" class="content-section min-h-screen flex flex-col justify-center items-center text-center p-4 pt-24">
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight text-white">Maulana Putra Wibawa</h1>
             <p class="text-lg md:text-2xl text-gray-300 mt-4 tracking-wide">
                 Photographer &nbsp;&bull;&nbsp; Videographer &nbsp;&bull;&nbsp; Editor &nbsp;&bull;&nbsp; Sound Producer
@@ -83,7 +83,7 @@
         </section>
 
         <!-- Section: About -->
-        <section id="about" class="content-section min-h-screen flex flex-col justify-center items-center p-4 pt-16">
+        <section id="about" class="content-section min-h-screen flex flex-col justify-center items-center p-4 pt-24">
             <div class="max-w-2xl text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">About Me</h2>
                 <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
@@ -91,12 +91,23 @@
                     Saya merupakan mahasiswa Produksi Media di Universitas Indonesia.
                     Berikut adalah beberapa karya dan hasil kerja saya dalam bidang fotografi, videografi, editing, produksi musik dan bidang media lainnya.
                 </p>
-                <!-- Button to Download CV -->
-                <a href="./YOUR_CV_FILE.pdf" id="download-cv-btn" download="Maulana_Putra_Wibawa_CV.pdf" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105 hover:bg-blue-700 shadow-lg">
-                    <i class="fa-solid fa-download mr-2"></i>
-                    Download CV
-                </a>
-                <p class="text-sm text-gray-500 mt-4">(Ganti "YOUR_CV_FILE.pdf" di code dengan nama file CV Anda)</p>
+                
+                <!-- Button container -->
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <!-- Button to Download CV (Primary) -->
+                    <a href="./YOUR_CV_FILE.pdf" id="download-cv-btn" download="Maulana_Putra_Wibawa_CV.pdf" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105 hover:bg-blue-700 shadow-lg">
+                        <i class="fa-solid fa-download mr-2"></i>
+                        Download CV
+                    </a>
+                    
+                    <!-- Button to Download ATS CV (Secondary) -->
+                    <a href="./YOUR_ATS_CV_FILE.pdf" id="download-ats-cv-btn" download="Maulana_Putra_Wibawa_ATS_CV.pdf" class="inline-block bg-gray-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105 hover:bg-gray-600 shadow-lg">
+                        <i class="fa-solid fa-file-lines mr-2"></i>
+                        Download ATS CV
+                    </a>
+                </div>
+                
+                <p class="text-sm text-gray-500 mt-6">(Ganti "YOUR_CV_FILE.pdf" dan "YOUR_ATS_CV_FILE.pdf" di code dengan nama file CV Anda)</p>
             </div>
         </section>
 
@@ -178,7 +189,7 @@
         </section>
 
         <!-- Section: Contact -->
-        <section id="contact" class="content-section min-h-screen flex flex-col justify-center items-center text-center p-4 pt-16">
+        <section id="contact" class="content-section min-h-screen flex flex-col justify-center items-center text-center p-4 pt-24">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Contact Me</h2>
             <p class="text-lg text-gray-300 mb-12 max-w-lg">
                 Feel free to reach out for collaborations, projects, or just to say hi!
@@ -278,7 +289,16 @@
                 // If the link is still the placeholder, show a helpful message
                 if (cvButton.getAttribute('href') === './YOUR_CV_FILE.pdf') {
                     e.preventDefault();
-                    alert('Tolong update link di file HTML (baris 118) ke file CV Anda yang sebenarnya!');
+                    alert('Tolong update link di file HTML (baris 121) ke file CV Anda yang sebenarnya!');
+                }
+            });
+
+            // Add listener for the new ATS CV button
+            const atsCvButton = document.getElementById('download-ats-cv-btn');
+            atsCvButton.addEventListener('click', (e) => {
+                if (atsCvButton.getAttribute('href') === './YOUR_ATS_CV_FILE.pdf') {
+                    e.preventDefault();
+                    alert('Tolong update link di file HTML (baris 127) untuk file ATS CV Anda!');
                 }
             });
         });
