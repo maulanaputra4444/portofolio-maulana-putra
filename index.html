@@ -1,1 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maulana Putra Wibawa - Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <style>
+        /* Applying the dark theme and font from the PDF */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark background (Tailwind bg-gray-900) */
+            color: #f3f4f6; /* Light text (Tailwind text-gray-100) */
+        }
+
+        /* Style for the active navigation link */
+        .nav-link.active {
+            color: #ffffff;
+            font-weight: 700;
+            border-bottom: 2px solid #3b82f6; /* Accent color */
+        }
+
+        /* Simple fade-in animation for sections */
+        .content-section {
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .content-section.visible {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Custom scrollbar for a more modern feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* bg-gray-800 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563; /* bg-gray-600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* bg-gray-500 */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-md text-gray-300 p-4 fixed top-0 left-0 right-0 z-50 border-b border-gray-700/50">
+        <nav class="container mx-auto flex justify-center md:justify-end space-x-6 md:space-x-8">
+            <a href="#home" class="nav-link p-2 text-sm md:text-base transition-colors hover:text-white" data-section="home">HOME</a>
+            <a href="#about" class="nav-link p-2 text-sm md:text-base transition-colors hover:text-white" data-section="about">ABOUT</a>
+            <a href="#projects" class="nav-link p-2 text-sm md:text-base transition-colors hover:text-white" data-section="projects">PROJECTS</a>
+            <a href="#contact" class="nav-link p-2 text-sm md:text-base transition-colors hover:text-white" data-section="contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- Section: Home -->
+        <section id="home" class="content-section min-h-screen flex flex-col justify-center items-center text-center p-4 pt-16">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight text-white">Maulana Putra Wibawa</h1>
+            <p class="text-lg md:text-2xl text-gray-300 mt-4 tracking-wide">
+                Photographer &nbsp;&bull;&nbsp; Videographer &nbsp;&bull;&nbsp; Editor &nbsp;&bull;&nbsp; Sound Producer
+            </p>
+        </section>
+
+        <!-- Section: About -->
+        <section id="about" class="content-section min-h-screen flex flex-col justify-center items-center p-4 pt-16">
+            <div class="max-w-2xl text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">About Me</h2>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+                    Hai, nama saya Maulana Putra Wibawa.
+                    Saya merupakan mahasiswa Produksi Media di Universitas Indonesia.
+                    Berikut adalah beberapa karya dan hasil kerja saya dalam bidang fotografi, videografi, editing, produksi musik dan bidang media lainnya.
+                </p>
+                <!-- Button to Download CV -->
+                <a href="./YOUR_CV_FILE.pdf" id="download-cv-btn" download="Maulana_Putra_Wibawa_CV.pdf" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105 hover:bg-blue-700 shadow-lg">
+                    <i class="fa-solid fa-download mr-2"></i>
+                    Download CV
+                </a>
+                <p class="text-sm text-gray-500 mt-4">(Ganti "YOUR_CV_FILE.pdf" di code dengan nama file CV Anda)</p>
+            </div>
+        </section>
+
+        <!-- Section: Projects -->
+        <section id="projects" class="content-section min-h-screen p-4 pt-24">
+            <div class="container mx-auto max-w-7xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-12 text-center">Projects</h2>
+                
+                <!-- Project Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Project 1: SMAVO IN ACTION -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-2xl border border-gray-700/50 transition-transform hover:scale-105">
+                        <!-- Image Placeholder -->
+                        <img src="https://placehold.co/600x400/2a2a2a/777?text=SMAVO+IN+ACTION" alt="SMAVO IN ACTION Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm font-semibold text-blue-400">EVENT</span>
+                            <h3 class="text-2xl font-bold text-white mt-2 mb-3">SMAVO IN ACTION 8.0</h3>
+                            <p class="text-gray-300 mb-4">Role: PDD (Publikasi, Dekorasi, Dokumentasi)</p>
+                            <a href="#" class="font-medium text-blue-500 hover:text-blue-400">View Trailer & Instagram &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Jelajah Kampus -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-2xl border border-gray-700/50 transition-transform hover:scale-105">
+                        <!-- Image Placeholder -->
+                        <img src="https://placehold.co/600x400/2a2a2a/777?text=Jelajah+Kampus" alt="Jelajah Kampus Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm font-semibold text-blue-400">EVENT</span>
+                            <h3 class="text-2xl font-bold text-white mt-2 mb-3">Jelajah Kampus 2025</h3>
+                            <p class="text-gray-300 mb-4">Role: PDD, Editor, Trailer Actor</p>
+                            <a href="#" class="font-medium text-blue-500 hover:text-blue-400">View Trailer & Instagram &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: QUIN5ENT Music -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-2xl border border-gray-700/50 transition-transform hover:scale-105">
+                        <!-- Image Placeholder -->
+                        <img src="https://placehold.co/600x400/2a2a2a/777?text=QUIN5ENT" alt="QUIN5ENT Music Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm font-semibold text-purple-400">MUSIC PRODUCTION</span>
+                            <h3 class="text-2xl font-bold text-white mt-2 mb-3">QUIN5ENT Band</h3>
+                            <p class="text-gray-300 mb-4">Role: Producer ("Agony"), Arranger & Mixing ("Cover Seandainya")</p>
+                            <a href="#" class="font-medium text-purple-500 hover:text-purple-400 block mb-2">Listen to "Agony" &rarr;</a>
+                            <a href="#" class="font-medium text-purple-500 hover:text-purple-400 block">Listen to "Seandainya" &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Freelance -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-2xl border border-gray-700/50 transition-transform hover:scale-105">
+                        <!-- Image Placeholder -->
+                        <img src="https://placehold.co/600x400/2a2a2a/777?text=Freelance" alt="Freelance Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm font-semibold text-green-400">FREELANCE</span>
+                            <h3 class="text-2xl font-bold text-white mt-2 mb-3">"Sweet Seventeen" Documentation</h3>
+                            <p class="text-gray-300 mb-4">Client: @dcolonel.rest</p>
+                            <p class="text-gray-300 mb-4">Role: PDD (Documentation)</p>
+                            <a href="#" class="font-medium text-green-500 hover:text-green-400">View Gallery &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Personal Project -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-2xl border border-gray-700/50 transition-transform hover:scale-105">
+                        <!-- Image Placeholder -->
+                        <img src="https://placehold.co/600x400/2a2a2a/777?text=Personal+Project" alt="Personal Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm font-semibold text-red-400">PERSONAL PROJECT</span>
+                            <h3 class="text-2xl font-bold text-white mt-2 mb-3">BAGAL (Sound Project)</h3>
+                            <p class="text-gray-300 mb-4">Covers: "Piggy" (Nine Inch Nails), "Burnt" </p>
+                            <p class="text-gray-300 mb-4">Role: Musician, Producer</p>
+                            <a href="#" class="font-medium text-red-500 hover:text-red-400">Listen/View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Add more project cards here as needed -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Contact -->
+        <section id="contact" class="content-section min-h-screen flex flex-col justify-center items-center text-center p-4 pt-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Contact Me</h2>
+            <p class="text-lg text-gray-300 mb-12 max-w-lg">
+                Feel free to reach out for collaborations, projects, or just to say hi!
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/6281389303662" target="_blank" rel="noopener noreferrer" class="flex items-center bg-gray-800 p-4 rounded-lg transition-transform hover:scale-105 hover:bg-gray-700 shadow-lg">
+                    <i class="fa-brands fa-whatsapp fa-2x text-green-400"></i>
+                    <span class="ml-4 text-lg text-white">081389303662</span>
+                </a>
+                
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/maulanaputra4444" target="_blank" rel="noopener noreferrer" class="flex items-center bg-gray-800 p-4 rounded-lg transition-transform hover:scale-105 hover:bg-gray-700 shadow-lg">
+                    <i class="fa-brands fa-instagram fa-2x text-pink-400"></i>
+                    <span class="ml-4 text-lg text-white">@maulanaputra4444</span>
+                </a>
+                
+                <!-- Email -->
+                <a href="mailto:maulanaputra4444@gmail.com" class="flex items-center bg-gray-800 p-4 rounded-lg transition-transform hover:scale-105 hover:bg-gray-700 shadow-lg">
+                    <i class="fa-solid fa-envelope fa-2x text-blue-400"></i>
+                    <span class="ml-4 text-lg text-white">maulanaputra4444@gmail.com</span>
+                </a>
+            </div>
+            
+            <!-- Linktree (from PDF) -->
+             <a href="#" class="inline-block bg-gray-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105 hover:bg-gray-600 shadow-lg mt-12">
+                <i class="fa-solid fa-link mr-2"></i>
+                View My Linktree
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center p-8 text-gray-500 border-t border-gray-800 mt-16">
+        <p>&copy; <span id="current-year"></span> Maulana Putra Wibawa. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.content-section');
+            const homeSection = document.getElementById('home');
+            const homeLink = document.querySelector('a[href="#home"]');
+
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Function to show a section
+            function showSection(sectionId) {
+                sections.forEach(section => {
+                    if (section.id === sectionId) {
+                        section.classList.add('visible');
+                    } else {
+                        section.classList.remove('visible');
+                    }
+                });
+
+                // Update active nav link
+                navLinks.forEach(link => {
+                    if (link.dataset.section === sectionId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            // Show home section by default
+            showSection('home');
+
+            // Add click event listeners to nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent default anchor jump
+                    const sectionId = link.dataset.section;
+                    showSection(sectionId);
+
+                    // Scroll to the section smoothly
+                    const sectionElement = document.getElementById(sectionId);
+                    if (sectionElement) {
+                        sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // Special case for Download CV button (just to show it works)
+            const cvButton = document.getElementById('download-cv-btn');
+            cvButton.addEventListener('click', (e) => {
+                // e.preventDefault(); // Removed prevention, let the link work
+                // In a real scenario, you would replace '#' in the 'href' with your CV's file path
+                // e.g., href="./assets/Maulana_Putra_Wibawa_CV.pdf"
+                // alert('This is where your CV will be linked for download!'); // Removed alert
+                
+                // If the link is still the placeholder, show a helpful message
+                if (cvButton.getAttribute('href') === './YOUR_CV_FILE.pdf') {
+                    e.preventDefault();
+                    alert('Tolong update link di file HTML (baris 118) ke file CV Anda yang sebenarnya!');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
